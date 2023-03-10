@@ -31,10 +31,26 @@
 
 
 @interface FADUser : RLMObject
+
+/// Primary key (should be), user ID
+@property NSInteger userID;
+
+/// user name
 @property NSString *name;
+
+/// nickname
 @property NSString *nickname;
+
+/// avatar
 @property NSString *avatar;
+
+/// height
 @property NSInteger height;
+
+/// weight
 @property NSInteger weight;
+
+/// remark
 @property NSString *remark;
+
 @end

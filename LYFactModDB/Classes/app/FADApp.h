@@ -31,5 +31,8 @@
 
 
 @interface FADApp : RLMObject
+
+/// is user logged in
 @property BOOL isLoggedIn;
+
 @end
