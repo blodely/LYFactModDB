@@ -44,6 +44,9 @@
 /// avatar
 @property NSString *avatar;
 
+/// birthday
+@property NSString *birthday;
+
 /// height
 @property NSInteger height;
 
@@ -52,5 +55,17 @@
 
 /// remark
 @property NSString *remark;
+
+@end
+
+// MARK: - CATEGORY FAD
+@interface FADUser (FAD)
+
+/// Get user instance by UserID
+/// - Parameter queryUserID: the userid
+- (instancetype)userByID:(NSInteger)queryUserID;
+
+/// Get user current age number
+- (NSInteger)currentAge;
 
 @end

@@ -34,3 +34,30 @@
 @implementation FADUser
 
 @end
+
+
+// MARK: - CATEGORY FAD
+@implementation FADUser (FAD)
+
+- (instancetype)userByID:(NSInteger)queryUserID {
+    
+    RLMResults *rets = [[self class] objectsWhere:@"userID == %d", queryUserID];
+    
+    if (rets != nil && [rets count] > 0) {
+        return rets.firstObject;
+    }
+    
+    return nil;
+}
+
+- (NSInteger)currentAge {
+    
+    if (self.birthday == nil) {
+        return 0;
+    }
+    
+    NSDate *bdate = [NSDate dateWithTimeIntervalSince1970:[self.birthday doubleValue]];
+    return [bdate getCurrentAgeForBirthdayDate];
+}
+
+@end

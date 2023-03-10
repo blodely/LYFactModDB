@@ -56,7 +56,7 @@ DatabaseModuleForFactMod.
   
   s.frameworks = 'UIKit'
   
-  s.dependency 'LYCategory'
+  s.dependency 'LYCategory', '~> 1.14.1'
   s.dependency 'LYFactAppCommon'
   
   s.dependency 'Realm', '= 10.36.0'
