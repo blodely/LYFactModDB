@@ -26,12 +26,18 @@ PODS:
   - LYFactModDB (0.1.0):
     - LYCategory
     - LYFactAppCommon
+    - Realm (= 10.36.0)
+  - Realm (10.36.0):
+    - Realm/Headers (= 10.36.0)
+  - Realm/Headers (10.36.0)
   - UICKeyChainStore (2.1.2)
 
 DEPENDENCIES:
   - LYFactModDB (from `../`)
 
 SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Realm
   trunk:
     - AFNetworking
     - FCUUID
@@ -50,7 +56,8 @@ SPEC CHECKSUMS:
   JLRoutes: d755245322b94227662ea3e43492fdca94e05c5b
   LYCategory: beedf5ec55523967766e9afc4e0b2ab30dc074bc
   LYFactAppCommon: 5298c5531851e065a12776ab895f2ed5a3c0e150
-  LYFactModDB: b3e82c35a0973ac035a9887e3bcba6bdf25f769c
+  LYFactModDB: 3f31d6bed6924cc8855e60c07b283b383c06c13a
+  Realm: 3fd136cb4c83a927482a7f1612496d37beed3cf5
   UICKeyChainStore: 85db518bb1d294366d15ec9b92a416c4e670518f
 
 PODFILE CHECKSUM: fd832b70bc8c3bb468b5e1e4fae4be40b7dbfb91
