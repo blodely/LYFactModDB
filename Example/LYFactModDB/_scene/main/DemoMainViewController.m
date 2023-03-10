@@ -48,6 +48,16 @@
         self.navigationItem.title = @"Demo";
     }
 }
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    {
+        FADUser *user = [[FADUser alloc] init];
+        [user generateUserIDIfNeeded];
+        NSLog(@"UserID=%@", user.userID);
+    }
+}
 // MARK: - METHOD
 // MARK: PRIVATE METHOD
 // MARK: - DELEGATE
