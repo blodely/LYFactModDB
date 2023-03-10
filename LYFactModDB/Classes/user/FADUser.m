@@ -39,9 +39,9 @@
 // MARK: - CATEGORY FAD
 @implementation FADUser (FAD)
 
-- (instancetype)userByID:(NSInteger)queryUserID {
+- (instancetype)userByID:(NSString *)queryUserID {
     
-    RLMResults *rets = [[self class] objectsWhere:@"userID == %d", queryUserID];
+    RLMResults *rets = [[self class] objectsWhere:@"userID == %@", queryUserID];
     
     if (rets != nil && [rets count] > 0) {
         return rets.firstObject;

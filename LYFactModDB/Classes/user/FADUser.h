@@ -33,7 +33,7 @@
 @interface FADUser : RLMObject
 
 /// Primary key (should be), user ID
-@property NSInteger userID;
+@property NSString *userID;
 
 /// user name
 @property NSString *name;
@@ -53,6 +53,9 @@
 /// weight
 @property NSInteger weight;
 
+/// record creation datetime
+@property NSString *dateCreated;
+
 /// remark
 @property NSString *remark;
 
@@ -63,7 +66,7 @@
 
 /// Get user instance by UserID
 /// - Parameter queryUserID: the userid
-- (instancetype)userByID:(NSInteger)queryUserID;
+- (instancetype)userByID:(NSString *)queryUserID;
 
 /// Get user current age number
 - (NSInteger)currentAge;
