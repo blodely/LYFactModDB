@@ -59,4 +59,6 @@ DatabaseModuleForFactMod.
   s.dependency 'LYCategory'
   s.dependency 'LYFactAppCommon'
   
+  s.dependency 'Realm', '= 10.36.0'
+  
 end

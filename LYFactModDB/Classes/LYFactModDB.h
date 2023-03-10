@@ -29,10 +29,9 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
 
 @interface LYFactModDB : NSObject
-
 @end
 
-NS_ASSUME_NONNULL_END
+#import <LYCategory/LYCategory.h>
+#import <Realm/Realm.h>

@@ -1,5 +1,5 @@
 //
-//  PreHeader.h
+//  FADUser.h
 //  LYFactModDB
 //
 //  Created by Luo Yu on 10/3/2023.
@@ -27,11 +27,14 @@
 //  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#ifndef PreHeader_h
-#define PreHeader_h
+#import <Realm/Realm.h>
 
-#import <LYCategory/LYCategory.h>
-#import <LYFactAppCommon/LYFactAppCommon.h>
-#import <LYFactModDB/LYFactModDB.h>
 
-#endif /* PreHeader_h */
+@interface FADUser : RLMObject
+@property NSString *name;
+@property NSString *nickname;
+@property NSString *avatar;
+@property NSInteger height;
+@property NSInteger weight;
+@property NSString *remark;
+@end

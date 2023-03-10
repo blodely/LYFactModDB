@@ -30,5 +30,4 @@
 #import "LYFactModDB.h"
 
 @implementation LYFactModDB
-
 @end

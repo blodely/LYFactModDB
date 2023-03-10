@@ -1,5 +1,5 @@
 //
-//  PreHeader.h
+//  FADUser.m
 //  LYFactModDB
 //
 //  Created by Luo Yu on 10/3/2023.
@@ -27,11 +27,10 @@
 //  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#ifndef PreHeader_h
-#define PreHeader_h
+#import "FADUser.h"
+#import "LYFactModDB.h"
 
-#import <LYCategory/LYCategory.h>
-#import <LYFactAppCommon/LYFactAppCommon.h>
-#import <LYFactModDB/LYFactModDB.h>
 
-#endif /* PreHeader_h */
+@implementation FADUser
+
+@end
