@@ -71,4 +71,7 @@
 /// Get user current age number
 - (NSInteger)currentAge;
 
+/// generate userID
+- (void)generateUserIDIfNeeded;
+
 @end

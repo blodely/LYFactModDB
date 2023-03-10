@@ -29,6 +29,7 @@
 
 #import "FADUser.h"
 #import "LYFactModDB.h"
+#import <FCUUID/FCUUID.h>
 
 
 @implementation FADUser
@@ -58,6 +59,16 @@
     
     NSDate *bdate = [NSDate dateWithTimeIntervalSince1970:[self.birthday doubleValue]];
     return [bdate getCurrentAgeForBirthdayDate];
+}
+
+- (void)generateUserIDIfNeeded {
+    if (_userID == nil || [_userID isEmpty]) {
+        _userID = [NSString stringWithFormat:@"%@-%@-%@",
+                   [[FCUUID uuid] stringByReplacingOccurrencesOfString:@"-" withString:@""],
+                   [[NSDate date] stringWithFormat:@"yyyyMMddHHmmss" andTimezone:TZShanghai],
+                   @([NSNumber randomIntegerBetween:1000 and:9999])
+        ];
+    }
 }
 
 @end
