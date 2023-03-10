@@ -1,5 +1,5 @@
 //
-//  LYFactModDB.h
+//  FADApp.m
 //  LYFactModDB
 //
 //  Created by Luo Yu on 10/3/2023.
@@ -27,15 +27,9 @@
 //  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
+#import "FADApp.h"
+#import "LYFactModDB.h"
 
 
-@interface LYFactModDB : NSObject
+@implementation FADApp
 @end
-
-#import <LYCategory/LYCategory.h>
-#import <Realm/Realm.h>
-
-// MARK: - MODEL TEMPLATES
-#import <LYFactModDB/FADApp.h>
-#import <LYFactModDB/FADUser.h>
