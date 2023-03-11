@@ -32,4 +32,9 @@
 
 
 @implementation FADApp
+
++ (NSString *)primaryKey {
+    return @"appID";
+}
+
 @end

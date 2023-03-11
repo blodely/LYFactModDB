@@ -32,7 +32,13 @@
 
 @interface FADApp : RLMObject
 
+/// App ID, primary key
+@property NSString *appID;
+
 /// is user logged in
 @property BOOL isLoggedIn;
+
+/// current loggedin user id, nil if user logout
+@property NSString *currentUserID;
 
 @end
