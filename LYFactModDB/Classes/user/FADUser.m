@@ -64,7 +64,7 @@
 - (void)generateUserIDIfNeeded {
     if (_userID == nil || [_userID isEmpty]) {
         _userID = [NSString stringWithFormat:@"%@-%@-%@",
-                   [[FCUUID uuid] stringByReplacingOccurrencesOfString:@"-" withString:@""],
+                   [[[FCUUID uuid] stringByReplacingOccurrencesOfString:@"-" withString:@""] substringToIndex:10],
                    [[NSDate date] stringWithFormat:@"yyyyMMddHHmmss" andTimezone:TZShanghai],
                    @([NSNumber randomIntegerBetween:1000 and:9999])
         ];
