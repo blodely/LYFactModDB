@@ -1,8 +1,8 @@
 //
-//  LYFactModDB.h
+//  FADRecord.h
 //  LYFactModDB
 //
-//  Created by Luo Yu on 10/3/2023.
+//  Created by Luo Yu on 13/3/2023.
 //  Email: indie.luo@gmail.com
 //
 //  The MIT License (MIT)
@@ -27,16 +27,19 @@
 //  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
-
-
-@interface LYFactModDB : NSObject
-@end
-
-#import <LYCategory/LYCategory.h>
 #import <Realm/Realm.h>
 
-// MARK: - MODEL TEMPLATES
-#import <LYFactModDB/FADApp.h>
-#import <LYFactModDB/FADUser.h>
-#import <LYFactModDB/FADRecord.h>
+
+@interface FADRecord : RLMObject
+
+@property NSString *recordID;
+@property NSString *timestamp;
+
+@end
+
+@interface FADRecord (FAD)
+
+/// generate recordID
+- (void)generateRecordIDIfNeeded;
+
+@end

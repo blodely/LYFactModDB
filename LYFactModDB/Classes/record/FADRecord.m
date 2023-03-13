@@ -1,8 +1,8 @@
 //
-//  LYFactModDB.h
+//  FADRecord.m
 //  LYFactModDB
 //
-//  Created by Luo Yu on 10/3/2023.
+//  Created by Luo Yu on 13/3/2023.
 //  Email: indie.luo@gmail.com
 //
 //  The MIT License (MIT)
@@ -27,16 +27,27 @@
 //  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
+#import "FADRecord.h"
+#import <LYCategory/LYCategory.h>
 
 
-@interface LYFactModDB : NSObject
+@implementation FADRecord
+
 @end
 
-#import <LYCategory/LYCategory.h>
-#import <Realm/Realm.h>
+// MARK: -
 
-// MARK: - MODEL TEMPLATES
-#import <LYFactModDB/FADApp.h>
-#import <LYFactModDB/FADUser.h>
-#import <LYFactModDB/FADRecord.h>
+@implementation FADRecord (FAD)
+
+- (void)generateRecordIDIfNeeded {
+    
+    if (_recordID == nil || [_recordID isEmpty]) {
+        _recordID = [NSString stringWithFormat:@"%@-%@-%04ld",
+                     [[[NSString uuid] stringByReplacingOccurrencesOfString:@"-" withString:@""] substringToIndex:10],
+                     [[NSDate date] stringWithFormat:@"yyyyMMddHHmmss"],
+                     [NSNumber randomIntegerBetween:1000 and:9999]
+        ];
+    }
+}
+
+@end
