@@ -57,6 +57,12 @@
         [user generateUserIDIfNeeded];
         NSLog(@"UserID=%@", user.userID);
     }
+    
+    {
+        FADRecord *record = [[FADRecord alloc] init];
+        [record generateRecordIDIfNeeded];
+        NSLog(@"RecordID=%@", record.recordID);
+    }
 }
 // MARK: - METHOD
 // MARK: PRIVATE METHOD
