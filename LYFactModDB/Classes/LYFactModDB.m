@@ -29,5 +29,44 @@
 
 #import "LYFactModDB.h"
 
+
 @implementation LYFactModDB
+
+// MARK: - INIT
+
+- (instancetype)init {
+    if (self = [super init]) {
+        [self migration];
+        [self initial];
+    }
+    return self;
+}
+
+- (void)migration {}
+
+- (void)initial {}
+
+// MARK: - METHOD
+
+// MARK: PRIVATE METHOD
+
+- (void)defaultResetConfiguration {
+    uint64_t version = 0;
+    
+    RLMRealmConfiguration *config = [RLMRealmConfiguration defaultConfiguration];
+    
+    config.schemaVersion = version;
+    
+    [config setMigrationBlock:^(RLMMigration *migration, uint64_t oldSchemaVersion) {
+        if ((oldSchemaVersion < version) || YES) {
+            [migration deleteDataForClassName:[FADApp className]];
+            [migration deleteDataForClassName:[FADBaseModel className]];
+            [migration deleteDataForClassName:[FADUser className]];
+            [migration deleteDataForClassName:[FADRecord className]];
+        }
+    }];
+    
+    [RLMRealmConfiguration setDefaultConfiguration:config];
+}
+
 @end

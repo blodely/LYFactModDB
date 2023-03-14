@@ -28,15 +28,20 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <LYCategory/LYCategory.h>
+#import <Realm/Realm.h>
 
 
 @interface LYFactModDB : NSObject
-@end
 
-#import <LYCategory/LYCategory.h>
-#import <Realm/Realm.h>
+- (void)migration;
+
+- (void)initial;
+
+@end
 
 // MARK: - MODEL TEMPLATES
 #import <LYFactModDB/FADApp.h>
 #import <LYFactModDB/FADUser.h>
 #import <LYFactModDB/FADRecord.h>
+#import <LYFactModDB/FADBaseModel.h>
