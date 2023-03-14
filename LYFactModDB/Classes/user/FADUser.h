@@ -66,7 +66,7 @@
 
 /// Get user instance by UserID
 /// - Parameter queryUserID: the userid
-- (instancetype)userByID:(NSString *)queryUserID;
++ (instancetype)userByID:(NSString *)queryUserID;
 
 /// Get user current age number
 - (NSInteger)currentAge;

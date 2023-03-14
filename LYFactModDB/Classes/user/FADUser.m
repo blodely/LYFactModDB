@@ -40,7 +40,7 @@
 // MARK: - CATEGORY FAD
 @implementation FADUser (FAD)
 
-- (instancetype)userByID:(NSString *)queryUserID {
++ (instancetype)userByID:(NSString *)queryUserID {
     
     RLMResults *rets = [[self class] objectsWhere:@"userID == %@", queryUserID];
     
