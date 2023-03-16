@@ -39,3 +39,11 @@
 @property NSString *createdDate;
 
 @end
+
+// MARK: -
+
+@interface FADBaseModel (FAD)
+
++ (instancetype)byID:(NSString *)queryUID;
+
+@end

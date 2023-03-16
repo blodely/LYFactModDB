@@ -31,5 +31,12 @@
 
 
 @implementation FADBaseModel
+@end
+
+@implementation FADBaseModel (FAD)
+
++ (instancetype)byID:(NSString *)queryUID {
+    return nil;
+}
 
 @end
