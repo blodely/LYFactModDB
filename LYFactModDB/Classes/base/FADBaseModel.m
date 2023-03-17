@@ -28,6 +28,7 @@
 //
 
 #import "FADBaseModel.h"
+#import <Realm/Realm.h>
 
 
 @implementation FADBaseModel
@@ -36,6 +37,10 @@
 @implementation FADBaseModel (FAD)
 
 + (instancetype)byID:(NSString *)queryUID {
+    RLMResults *results = [[self class] objectsWhere:@"uniqueID == %@", queryUID];
+    if (results != nil && results.count > 0) {
+        return results.firstObject;
+    }
     return nil;
 }
 
